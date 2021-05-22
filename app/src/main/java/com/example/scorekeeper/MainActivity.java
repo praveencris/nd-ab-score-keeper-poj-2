@@ -18,13 +18,15 @@ public class MainActivity extends AppCompatActivity {
     private int scoreTeamB = 0;
     private int foulTeamA = 0;
     private int foulTeamB = 0;
-    TextView teamAScoreText, teamBScoreText, teamAFoulText, teamBFoulText;
+    private TextView teamAScoreText;
+    private TextView teamBScoreText;
+    private TextView teamAFoulText;
+    private TextView teamBFoulText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         if (savedInstanceState != null) {
             scoreTeamA = savedInstanceState.getInt(EXTRA_SCORE_A, 0);
             scoreTeamB = savedInstanceState.getInt(EXTRA_SCORE_B, 0);
@@ -34,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
         teamAScoreText = findViewById(R.id.teamALayout).findViewById(R.id.scoreValueText);
         teamBScoreText = findViewById(R.id.teamBLayout).findViewById(R.id.scoreValueText);
-
         teamAFoulText = findViewById(R.id.teamALayout).findViewById(R.id.foulValueText);
         teamBFoulText = findViewById(R.id.teamBLayout).findViewById(R.id.foulValueText);
 
