@@ -32,14 +32,13 @@ public class MainActivity extends AppCompatActivity {
             foulTeamB = savedInstanceState.getInt(EXTRA_FOUL_B, 0);
         }
 
-        setScore();
-
         teamAScoreText = findViewById(R.id.teamALayout).findViewById(R.id.scoreValueText);
         teamBScoreText = findViewById(R.id.teamBLayout).findViewById(R.id.scoreValueText);
 
         teamAFoulText = findViewById(R.id.teamALayout).findViewById(R.id.foulValueText);
         teamBFoulText = findViewById(R.id.teamBLayout).findViewById(R.id.foulValueText);
 
+        setScore();
         findViewById(R.id.teamALayout).findViewById(R.id.addGoalBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,8 +92,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) {
-        super.onSaveInstanceState(outState, outPersistentState);
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
         outState.putInt(EXTRA_SCORE_A, scoreTeamA);
         outState.putInt(EXTRA_SCORE_B, scoreTeamB);
         outState.putInt(EXTRA_FOUL_A, foulTeamA);
