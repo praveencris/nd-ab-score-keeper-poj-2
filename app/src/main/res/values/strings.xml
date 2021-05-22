@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ScoreKeeper</string>
+    <string name="team_a">Team A</string>
+    <string name="score">Score:</string>
+    <string name="fouls">Fouls:</string>
+    <string name="add_goal_1">Add Goal +1</string>
+    <string name="add_foul_1">Add Foul +1</string>
+    <string name="game_score">Game Score</string>
+    <string name="reset">Reset</string>
+</resources>
